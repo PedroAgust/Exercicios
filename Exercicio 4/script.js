@@ -5,7 +5,11 @@ function ComputadorDeBordo(){
     const gasolina = money / 5
     const km = gasolina * 20
 
-    result.innerHTML= `Com R$${money} voce consegue comprar ${gasolina} litros de gasolina e andar ${km} KM`
+    if(money != ''){
+        result.innerHTML= `Com R$${money} voce consegue comprar ${gasolina} litros de gasolina e andar ${km} KM`
+    }else{
+        result.innerHTML= 'Informe quanto de dinheiro voce tem!'
+    }
 }
 
 button.addEventListener('click', ComputadorDeBordo)
